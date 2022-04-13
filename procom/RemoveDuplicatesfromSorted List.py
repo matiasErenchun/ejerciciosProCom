@@ -9,7 +9,7 @@ class Solution:
     nodo2 = ListNode(2, nodo3)
     nodo1 = ListNode(1, nodo2)
     nodo0 = ListNode(1, nodo1)
-    
+
     def deleteDuplicates(self, head: [ListNode]) -> [ListNode]:
         cur = head
         while cur:
