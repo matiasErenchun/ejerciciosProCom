@@ -51,6 +51,34 @@ bool isPalindromo(std::string a)
     return pali;
 }
 
+bool isPalindromo2(std::string a)
+{
+    bool pali= true;
+    int i=0,j = int(a.size()-1);
+    while (i<=j)
+    {
+        if(!std::isalnum(a[i]))
+        {
+            i++;
+        }
+        else if (!std::isalnum(a[j]))
+        {
+            j--;
+        }
+        else
+        {
+            if(std::tolower(a[i])!= std::tolower(a[j]))
+            {
+                pali=false;
+                i+=j;
+            }
+            i++;
+            j--;
+        }
+    }
+    return pali;
+}
+
 int main() {
     char a[40];
     /*
@@ -60,7 +88,8 @@ int main() {
     std::cin.getline(a,40);
     std::string  b (a);
 
-    std::cout << isPalindromo(misoloLetras(b)) << std::endl;
+    //std::cout << isPalindromo(misoloLetras(b)) << std::endl;
+    std::cout << isPalindromo2(b);
     /*
      * por otra parte el std::cin permite leer elementos desde entrada estandar
      */
