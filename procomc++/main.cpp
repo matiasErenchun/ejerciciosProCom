@@ -53,6 +53,8 @@ bool isPalindromo(std::string a)
 
 bool isPalindromo2(std::string a)
 {
+    //funciones para validar cositas.
+    //http://manpages.ubuntu.com/manpages/bionic/es/man3/isalpha.3.html#:~:text=isalpha()%20comprueba%20si%20el,sean%20ni%20may%C3%BAculas%20ni%20min%C3%BAsculas.
     bool pali= true;
     int i=0,j = int(a.size()-1);
     while (i<=j)
